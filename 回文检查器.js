@@ -30,7 +30,7 @@ function palindrome(str) {
   let arr=str.toLowerCase().split(/[^a-z0-9]|\s+/g).join('').split('');
   let len=arr.length;
   for(let i=0,j=len-1;i<j;i++,j--){ // 双指针改进版，单指针 for(let i=0;i<len/2;i++){
-  	if(arr[i]!=arr[j]){ 	// 利用两个指针下表和为len-1		if(arr[i]!=arr[len-i-1]){
+  	if(arr[i]!=arr[j]){ 	// 利用两个指针下标和为len-1		if(arr[i]!=arr[len-i-1]){
   		return false;
   	}
   }
